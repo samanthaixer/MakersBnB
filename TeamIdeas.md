@@ -4,3 +4,4 @@
 > Please write your name, description of thought and then explain if needed. Go Team!
 
 // git checkout -b * name of the branch you wanna make *
+// git push origin * branch name *  
