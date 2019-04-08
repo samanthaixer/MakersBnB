@@ -8,3 +8,7 @@
 =======
 // git checkout -b * name of the branch you wanna make *
 
+// git push origin * branch name *  
+=======
+
+

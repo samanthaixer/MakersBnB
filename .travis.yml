@@ -1,0 +1,19 @@
+
+language: ruby
+rvm:
+ - 2.6.0
+
+services:
+  - postgresql
+
+script:
+  - RACK_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rspec spec/
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq postgresql-server-dev-9.3
+
+before_script:
+  - psql -c 'create database rentaburrow_test;' -U postgres
+  - psql -c 'create database rentaburrow;' -U postgres
