@@ -11,4 +11,6 @@
 // git push origin * branch name *  
 =======
 
+sudo -u postgres psql < create_db.sql
+
 
