@@ -1,13 +1,12 @@
 
 language: ruby
 rvm:
- - 2.6.0
+ - 2.5.0
 
 services:
   - postgresql
 
 script:
-  - RACK_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rspec spec/
 
 before_install:
@@ -17,3 +16,4 @@ before_install:
 before_script:
   - psql -c 'create database rentaburrow_test;' -U postgres
   - psql -c 'create database rentaburrow;' -U postgres
+  
