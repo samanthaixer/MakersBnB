@@ -11,6 +11,15 @@
 // git push origin * branch name *  
 =======
 
-sudo -u postgres psql < create_db.sql
+===================================
+Automatically set up the databases:
+===================================
+
+* In your repo directory *
+  
+git pull
+cd database
+chmod +x databaseSetup.sh
+./databaseSetup.sh
 
 
