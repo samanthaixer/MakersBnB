@@ -86,11 +86,7 @@ DEPENDENCIES
   sinatra
 
 RUBY VERSION
-<<<<<<< HEAD
-   ruby 2.5.3p105
-=======
    ruby 2.5.0p0
->>>>>>> ece37b499bfaf01fdd4fbfa2d93e695d03828970
 
 BUNDLED WITH
-   1.17.3
+   2.0.1
