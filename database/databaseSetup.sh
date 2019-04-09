@@ -5,7 +5,7 @@
 #
 #-----------------------------------------------------------------
 
-echo 
+echo
 echo "---------------------------------------"
 echo "Setting up rentaburrow database"
 echo "It will most likely need your password"
