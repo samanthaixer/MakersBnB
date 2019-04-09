@@ -14,9 +14,9 @@ echo
 
 
 echo "Pushing main database sql commands into postgres... hang tight."
-sudo -u postgres psql < main_db.sql
+psql < main_db.sql
 
 echo "Pushing testing framework sql commands into postgres... almost there!"
-sudo -u postgres psql < test_db.sql
+psql < test_db.sql
 
 echo "All done. GO GOOSE!"
