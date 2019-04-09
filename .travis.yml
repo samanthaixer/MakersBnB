@@ -16,4 +16,4 @@ before_install:
 before_script:
   - psql -c 'create database rentaburrow_test;' -U postgres
   - psql -c 'create database rentaburrow;' -U postgres
-  
+  - psql rentaburrow_test -c 'CREATE TABLE nests (id SERIAL PRIMARY KEY, name VARCHAR(60), description VARCHAR(60), nightlyrate NUMERIC(6,2), status VARCHAR(20));' -U postgres
