@@ -1,4 +1,5 @@
 require 'pg'
+require 'rspec/json_expectations'
 
 ENV['RACK_ENV'] = 'test'
 
