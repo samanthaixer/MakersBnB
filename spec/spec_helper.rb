@@ -5,7 +5,7 @@ require 'rspec'
 
 ENV['RACK_ENV'] = 'test'
 
-
+require './spec/rspec/database_connection_setup.rb'
 require_relative './rspec/setup_test_database.rb'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
