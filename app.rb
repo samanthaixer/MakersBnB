@@ -9,4 +9,8 @@ class RentABurrow < Sinatra::Base
     puts Nest.details_json(1);
   end
 
+  # get '/' do
+  #   send_file File.join(settings.public_folder, 'index.html')
+  # end
+
 end
