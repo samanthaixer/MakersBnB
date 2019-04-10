@@ -1,9 +1,9 @@
-
 require 'json'
+require_relative './database_connection.rb'
 
 class Nest
 
-attr_reader :name, :description, :nightly_rate
+  attr_reader :name, :description, :nightly_rate
 
   def initialize(name:, description:, nightly_rate: )
     @name = name

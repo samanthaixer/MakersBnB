@@ -1,10 +1,11 @@
 require 'pg'
+require 'rspec'
 require "rspec/expectations"
-require 'rspec/json_expectations'
+# require 'rspec/json_expectations'
 
 ENV['RACK_ENV'] = 'test'
 
-require_relative './rspec/database_connection_setup.rb'
+require './spec/rspec/database_connection_setup.rb'
 require_relative './rspec/setup_test_database.rb'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
