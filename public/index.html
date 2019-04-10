@@ -1,73 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    body {
-        font-family: Arial;
-        color: white
-    }
-    .split {
-        height: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        overflow-x: hidden;
-        padding-top: 20px;
-        }
+<center>
+  <!DOCTYPE html>
+  <html>
 
-    .left {
-        left: 0;
-        background-color:lightgray;
-        width: 20%;
-        }
+  <style>
+      body {background-color: #F16664;}
+      h1   {color: #FFF6E6;}
+      h2   {color: #00aced;}
+      h3   {color: #ffffff;}
+      input {margin: 1%}
+      input {padding: 0.5%}
+      input {font-family: "Helvetica Neue"}
+  </style>
 
-    .right {
-        right: 0;
-        background-color: whitesmoke;
-        width: 80%;
-        }
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Page Title</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="/src/scripts/rentaburrow.js"></script>
+      <!-- <link href="<%= url('/public/styles/style.css') %>" rel="stylesheet" type="text/css" /> -->
+      <!-- An external stylsheet can be linked here; though a bit fiddly to get working with sinatra! -->
+  </head>
 
-    .input {
-        left: 10%;
-        padding: 30px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        width: 70%;
-        border-radius: 5px;
-    }
+  <body>
+  <span style="font-family:Helvetica Neue">
+      <h1 id="RentABurrow">RentABurrow</h1>
 
-    </style>
-<head>
-    <h2>Welcome to Rent-A-Burrow ::: Find a cave of your own!</h2>
-
-</head>
-
-<body>
-    <div class="split left">
-        <div class="input">
-            <form>
-                <p>What kind of cave:</p>
-                <input type="text" id="heading" name="heading" value="A brief header"><br>
-                <p>Give a brief description: </p>
-                <input type="text" id="description" name="description" placeholder="Description here"><br>
-                <p></p>
-                <input id="submit" type="submit">
-            </form>
-            <p>-------------</p>
-            <button id="testButton">Test</button>
-
-        </div>
-    </div>
-
-    <div class="split right">
-            <div class="display">
-            <button id="getstuff">Get Stuff</button>
-
-
-            </div>
-        </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/src/scripts/rentaburrow.js"></script>
-</body>
-
-</html>
+      <form>
+          <input type="text" name="heading" value="A brief header"><br>
+          <input type="text" name="description" value="Description here"><br>
+          <input type="text" name="nightly_rate" value="Nightly Rate"><br>
+          <input id="submit" type="submit" value="Add Nest">
+      </form>
+      </span>
+  </body>

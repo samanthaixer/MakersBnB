@@ -1,4 +1,4 @@
-feature 'Viewing nest information' do
+xfeature 'Viewing nest information' do
   scenario 'when button clicked' do
     visit '/rentaburrow'
     click_button 'Get Stuff'

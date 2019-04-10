@@ -5,8 +5,16 @@ require "rspec/expectations"
 
 ENV['RACK_ENV'] = 'test'
 
+require 'capybara'
+require 'capybara/rspec'
+
+require './app.rb'
+
 require './spec/rspec/database_connection_setup.rb'
 require_relative './rspec/setup_test_database.rb'
+
+Capybara.app = RentABurrow
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each) do
