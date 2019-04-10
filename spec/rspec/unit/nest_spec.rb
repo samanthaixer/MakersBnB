@@ -1,6 +1,6 @@
-
 require 'nest.rb'
 require 'json'
+
 describe Nest do
 
   before(:each) do
@@ -25,13 +25,13 @@ describe Nest do
     expect(Nest.details(nest_id)).to have_attributes(nightly_rate: "200.00")
   end
 
-  it 'translates our Nest object into a JSON object' do
-    expect(Nest.details_json(@line1[0]['id'])).to include_json(
-      "name": 'Mongoose Manor',
-      "description": 'The loveliest, comfiest manor of all',
-      "nightly_rate": "200.00"
-      
-    )
-    # expect(Nest.details_json(@line1[0]['id'])).to include_json()
-  end
+  # it 'translates our Nest object into a JSON object' do
+  #   expect(Nest.details_json(@line1[0]['id'])).to include_json(
+  #     "name": 'Mongoose Manor',
+  #     "description": 'The loveliest, comfiest manor of all',
+  #     "nightly_rate": "200.00"
+  #
+  #   )
+  #   # expect(Nest.details_json(@line1[0]['id'])).to include_json()
+  # end
 end

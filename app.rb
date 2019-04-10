@@ -1,10 +1,12 @@
-require 'rack'
+require 'pg'
 require 'sinatra'
+require './lib/nest'
+require './spec/rspec/database_connection_setup.rb'
 
-class AirBnB_App < Sinatra::Base
+class RentABurrow < Sinatra::Base
 
-  get '/' do
-    erb :index
+  get '/rentaburrow' do
+    puts Nest.details_json(1);
   end
 
 end

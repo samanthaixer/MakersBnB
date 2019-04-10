@@ -8,7 +8,7 @@ We would like a web application that allows users to list spaces they have avail
 ```
 As a Mongoose,
 So that I can post my nest on the site,
-I want to be able to add a new nest listing.  
+I want to be able to add a new nest listing : Name/Description/Price.
 
 As a Mongoose,
 So that my clients can recognise my nest,
