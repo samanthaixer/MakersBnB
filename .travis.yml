@@ -11,7 +11,7 @@ script:
 
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-homeb install -qq postgresql-server-dev-9.3
+  - sudo apt-home install -qq postgresql-server-dev-9.3
 
 before_script:
   - psql -c 'create database rentaburrow_test;' -U postgres
