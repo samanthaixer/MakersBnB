@@ -1,48 +1,11 @@
-<!--
-<center>
- <!DOCTYPE html>
- <html>
 
- <style>
-     body {background-color: #F16664;}
-     h1   {color: #FFF6E6;}
-     h2   {color: #00aced;}
-     h3   {color: #ffffff;}
-     input {margin: 1%}
-     input {padding: 0.5%}
-     input {font-family: "Helvetica Neue"}
- </style>
-
- <head>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>Page Title</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="/src/scripts/rentaburrow.js"></script>
-     <!-- <link href="<%= url('/public/styles/style.css') %>" rel="stylesheet" type="text/css" />
-     <!-- An external stylsheet can be linked here; though a bit fiddly to get working with sinatra!
- </head>
-
- <body>
- <span style="font-family:Helvetica Neue">
-     <h1 id="RentABurrow">RentABurrow</h1>
-
-     <form>
-         <input type="text" name="heading" value="A brief header"><br>
-         <input type="text" name="description" value="Description here"><br>
-         <input type="text" name="nightly_rate" value="Nightly Rate"><br>
-         <input id="submit" type="submit" value="Add Nest">
-     </form>
-     </span>
- </body>
-======= -->
 <!DOCTYPE html>
 <html>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <style>
    body {
        font-family: Arial;
+       background-image: url("Leaves.jpg");
        color: white
    }
    .split {
@@ -56,13 +19,13 @@
 
    .left {
        left: 0;
-       background-color:lightgray;
+       background:transparent;
        width: 20%;
        }
 
    .right {
        right: 0;
-       background-color: whitesmoke;
+       /* background-color: whitesmoke; */
        width: 80%;
        }
 
@@ -74,10 +37,20 @@
        width: 70%;
        border-radius: 5px;
    }
+   h1 {
+     position: absolute;
+     text-align: center;
+     top: 30%;
+     left: 15%;
+     font-family: 'Quicksand', sans-serif;
+     font-weight: 300;
+     font-size: 80px;
+
+   }
+
 
    </style>
 <head>
-   <h2>Welcome to Rent-A-Burrow ::: Find a cave of your own!</h2>
 
 </head>
 
@@ -99,12 +72,15 @@
    </div>
 
    <div class="split right">
+     <center>
+    <h1 class="flexbox">Welcome to Rent-A-Burrow</h1><br>
+     <!-- <h3>Find a cave of your own!</h3> -->
            <div class="display">
            <button id="getfirstnest">Get First Nest</button>
            <h1 id="name1"></h1>
            <h1 id="description1"></h1>
            <h1 id="nightly_rate1"></h1>
-
+    </center>
            </div>
        </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
