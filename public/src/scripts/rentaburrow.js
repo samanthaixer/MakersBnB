@@ -1,12 +1,4 @@
 
-$(document).ready(function() {
-    $('#submit').on('click', function(){
-        console.log("YAAAAAAAYYYYYYYYYYYYYY");
-    });
-
-});
-
-
 // $.get(“localhost:1234/test“, function(TestFunct) {
 //       console.log("WOOOHOOOOOO);
 //     });
@@ -49,19 +41,21 @@ $(document).ready(function() {
     // }
     $('#testButton').click(function() {
       $.get('https://async-workshops-api.herokuapp.com/people', function(response) {
+        // 'localhost:1234'
+        // 'https://async-workshops-api.herokuapp.com/people'
         // (response => response.json)
         // .then(response)
 
-        console.log("Is this here?")
-        practice = response
-        // obj = JSON.parse(practice);
+        console.log("Here's a list of names: ")
+        nests = response
 
-        console.log(practice[3]);
-        // console.log(nests.description);
-        // console.log(nests.nightlyrate);
+        nests.forEach(function(key) {
+          console.log(key['name']);
+        });
+        // console.log(nests[0]['name'])
+        // console.log(nests[0]['description']);
+        // console.log(nests[0]['nightlyrate']);
 
-        //   var nests = JSON.parse(this.responseText);
-        // document.getElementById("?").innerHTML = nests.name;
       })
     });
 });
