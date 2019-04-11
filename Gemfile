@@ -12,6 +12,7 @@ gem 'rack'
 gem 'rake'
 gem 'rerun'
 gem 'sinatra'
+gem 'selenium-webdriver'
 
 group :test do
   gem 'capybara'
@@ -20,5 +21,5 @@ group :test do
   gem 'rspec-json_expectations'
   gem 'rubocop', '0.56.0'
   gem 'simplecov', require: false
-  gem 'simplecov-console', require: false 
+  gem 'simplecov-console', require: false
 end

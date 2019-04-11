@@ -14,7 +14,7 @@ require './spec/rspec/database_connection_setup.rb'
 require_relative './rspec/setup_test_database.rb'
 
 Capybara.app = RentABurrow
-
+Capybara.javascript_driver= :selenium
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each) do

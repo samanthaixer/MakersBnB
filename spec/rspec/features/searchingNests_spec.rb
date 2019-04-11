@@ -7,3 +7,13 @@
 #   end
 # end
 
+# feature 'Viewing names from test API', :js => true do
+#   scenario 'when test button is clicked' do
+#     visit '/'
+#     page.execute_script("$('#testButton').click()")
+#     # expect(page.find_by_id('name1')).to eq 'Bart'
+#     # expect(page).to have_id('name1'
+#     expect(page).to have_content('Bart')
+#
+#   end
+# end
