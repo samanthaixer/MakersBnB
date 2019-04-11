@@ -8,6 +8,7 @@ class RentABurrow < Sinatra::Base
   get '/rentaburrow/view' do
      # return '[{"id":0,"name":"Bart"},{"id":1,"name":"Lauren"},{"id":2,"name":"Henry"},{"id":3,"name":"Sam"}]'
     Nest.details_json(1);
+    # p Nest.all
   end
 
   get '/' do
@@ -19,3 +20,5 @@ class RentABurrow < Sinatra::Base
     return id
   end
 end
+
+

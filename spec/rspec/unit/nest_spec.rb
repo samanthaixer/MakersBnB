@@ -29,15 +29,12 @@ describe Nest do
     expect(Nest.details(nest_id)).to have_attributes(nightly_rate: "200.00")
   end
 
-  # it 'translates our Nest object into a JSON object' do
-  #   expect(Nest.details_json(@line1[0]['id'])).to include_json(
-  #     "name": 'Mongoose Manor',
-  #     "description": 'The loveliest, comfiest manor of all',
-  #     "nightly_rate": "200.00"
-  #
-  #   )
-  #   # expect(Nest.details_json(@line1[0]['id'])).to include_json()
-  # end
+  it 'displays all nests' do
+    @nest = Nest.all
+    expect(@nest).to include('{"name":"Mongoose Manor","description":"The loveliest, comfiest manor of all","nightly_rate":"200.00"}')
+    expect(@nest).to include('{"name":"Foliage Flat","description":"A beautiful flat full of green","nightly_rate":"130.00"}')
+  end
+
   describe 'creation' do
     it 'creates a nest with given parameters' do
       expect(Nest.create("Muddy Hole", "Expensive mud hole", "300.00")).to be_a(Integer)

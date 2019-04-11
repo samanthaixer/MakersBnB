@@ -33,8 +33,25 @@ class Nest
   def self.create(name, description, nightly_rate)
     results = DatabaseConnection.query("insert into nests (name, description, nightlyrate) values ('#{name}', '#{description}', #{nightly_rate}) returning id;")
     id = results[0]['id'].to_i
-    # json_start = '[{"id":"'
-    # json_end = '"}]'
-    # return json_start + id.to_s + json_end
+    return id
   end
+
+  def self.all
+    results = DatabaseConnection.query("select * from nests;")
+    nests = results.map { |nest| Nest.new(name: nest['name'],description: nest['description'],nightly_rate: nest['nightlyrate'])}
+    self.json_all(nests)
+  end
+
+  def self.json(nest)
+    {'name' => nest.name, 'description' => nest.description, 'nightly_rate' => nest.nightly_rate}.to_json
+  end
+
+  def self.json_all(all_nests)
+    nests = []
+    all_nests.each do |nest|
+    nests.push(json(nest))
+    end
+    return nests
+  end
+
 end
