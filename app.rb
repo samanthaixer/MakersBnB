@@ -14,12 +14,8 @@ class RentABurrow < Sinatra::Base
     send_file File.join(settings.public_folder, 'index.html')
   end
 
-
   post '/rentaburrow/add' do
-    puts "I got to here"
-    puts params
     id = Nest.create(params['heading'], params['description'], params['nightly_rate']);
+    return id
   end
-
-
 end
