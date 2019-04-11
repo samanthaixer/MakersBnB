@@ -2,6 +2,7 @@ $(document).ready(function() {
    $('#getfirstnest').click(function() {
      $.getJSON('http://localhost:1234/rentaburrow/view', function(nests) {
        nests.forEach(function(key, index) {
+        console.log('TESTTTTT!!!!!!!!!!');
          $('#name'+ parseInt(index+1, 10)).text("Nest name: " + (key['name']));
          $('#description'+ parseInt(index+1, 10)).text("Nest description: " + (key['description']));
          $('#nightly_rate'+ parseInt(index+1, 10)).text("Nightly rate: " + (key['nightly_rate']));
