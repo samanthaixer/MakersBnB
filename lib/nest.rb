@@ -33,6 +33,8 @@ class Nest
   def self.create(name, description, nightly_rate)
     results = DatabaseConnection.query("insert into nests (name, description, nightlyrate) values ('#{name}', '#{description}', #{nightly_rate}) returning id;")
     id = results[0]['id'].to_i
-    return id
+    # json_start = '[{"id":"'
+    # json_end = '"}]'
+    # return json_start + id.to_s + json_end
   end
 end
