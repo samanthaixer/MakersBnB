@@ -40,14 +40,17 @@ $(document).ready(function() {
     //     $('#heading').val("Click!");
     // }
     $('#testButton').click(function() {
-      $.get('https://async-workshops-api.herokuapp.com/people', function(response) {
+      // $.get('http://localhost:1234/rentaburrow', function(response) {
+        $.getJSON('http://localhost:1234/rentaburrow', function(data) {
+
         // 'localhost:1234'
         // 'https://async-workshops-api.herokuapp.com/people'
         // (response => response.json)
         // .then(response)
 
         console.log("Here's a list of names: ")
-        nests = response
+        nests = data
+        console.log(nests);
 
         nests.forEach(function(key) {
           console.log(key['name']);
