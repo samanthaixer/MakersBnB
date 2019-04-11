@@ -1,12 +1,4 @@
 
-$(document).ready(function() {
-    $('#submit').on('click', function(){
-        console.log("YAAAAAAAYYYYYYYYYYYYYY");
-    });
-
-});
-
-
 // $.get(“localhost:1234/test“, function(TestFunct) {
 //       console.log("WOOOHOOOOOO);
 //     });
@@ -20,7 +12,7 @@ $(document).ready(function() {
 //            $(document.createElement('li')).text(item)
 //        );
 //    });
-   
+
 
 
 
@@ -37,3 +29,37 @@ $(document).ready(function() {
 //         $('#heading').val("Click!");
 //     }
 // });
+
+$(document).ready(function() {
+    // $('#testButton').click(function() {
+    //     console.log("Click!")
+    //     updateTest();
+    //   });
+    //
+    // function updateTest() {
+    //     $('#heading').val("Click!");
+    // }
+    $('#testButton').click(function() {
+      $.get('https://async-workshops-api.herokuapp.com/people', function(response) {
+        // 'localhost:1234'
+        // 'https://async-workshops-api.herokuapp.com/people'
+        // (response => response.json)
+        // .then(response)
+
+        console.log("Here's a list of names: ")
+        nests = response
+
+        nests.forEach(function(key) {
+          console.log(key['name']);
+        });
+        // console.log(nests[0]['name'])
+        // console.log(nests[0]['description']);
+        // console.log(nests[0]['nightlyrate']);
+
+      })
+    });
+});
+
+
+// current code works when using the herokuapp site, the code under the get request
+// is recoomended by ellie.
