@@ -17,8 +17,12 @@ class Nest
   end
 
   def self.translate_to_json(nest)
-    nest = { "name" => nest.name, "description" => nest.description, "nightly_rate" => nest.nightly_rate}
-  end
+     name = '[{"name":"'
+     description = '", "description":"'
+     nightly_rate = '", "nightly_rate":"'
+     last = '"}]'
+     jsonNest = name + nest.name + description + nest.description + nightly_rate + nest.nightly_rate + last
+   end
 
   def self.details_json(id)
       results = DatabaseConnection.query("select * from nests where id = #{id};")
