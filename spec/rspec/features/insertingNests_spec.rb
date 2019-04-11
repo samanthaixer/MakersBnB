@@ -1,3 +1,4 @@
+
 # feature 'Adding nest information' do
 #   scenario 'Adds a new nest' do
 #     visit '/'
@@ -10,3 +11,4 @@
 #     expect(page).to have_content "Mongoose Manor"
 #   end
 # end
+

@@ -25,4 +25,10 @@ class Nest
       nest = Nest.new(name: results[0]['name'], description: results[0]['description'], nightly_rate: results[0]['nightlyrate'])
       self.translate_to_json(nest)
   end
+
+  def self.create(name, description, nightly_rate)
+    results = DatabaseConnection.query("insert into nests (name, description, nightlyrate) values ('#{name}', '#{description}', #{nightly_rate}) returning id;")
+    id = results[0]['id'].to_i
+    return id
+  end
 end
