@@ -14,6 +14,7 @@ $(document).ready(function() {
       //     <p class='Body' id='nightly_rate2'></p>
       //   </div>");
       // });
+      pageOnLoad();
     });
   });
 
@@ -35,3 +36,7 @@ $(document).ready(function() {
    //     <p class="Body" id="nightly_rate2"></p>
    // </div>");
 });
+function pageOnLoad() {
+    $("#cardiB").append('<ul class="cardiA"><li class="CardiContainer"><img src="sloth.jpg" alt="Avatar"><p class="Header">Nest Name</p><p class="Description">Nest Description</p><p class="Body">Nightly Rate</p></div></div>');
+}
+// <img src="sloth.jpg" alt="Avatar">
