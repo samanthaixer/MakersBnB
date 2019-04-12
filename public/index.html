@@ -26,18 +26,57 @@
        right: 0;
        width: 70%;
        }
+    p.welcome{
+            position: relative;
+            text-align: center;
+            width: 100%;
+            font-family: Roboto, sans-serif;
+            font-weight: 60;
+            font-size: 80px;
+            color: whitesmoke;
+            border-style: none;
+            background-color: rgba(100%, 100%, 100%, 0.1);
+          }
+::placeholder{
+  color: whitesmoke;
+}
 
-   p.welcome {
+   p.Header{
         position: relative;
         text-align: center;
         width: 100%;
         font-family: Roboto, sans-serif;
-        font-weight: 200;
-        font-size: 80px;
+        font-weight: 60;
+        font-size: 50px;
         color: whitesmoke;
         border-style: none;
         background-color: rgba(100%, 100%, 100%, 0.1);
    }
+
+   p.Description{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        font-family: Roboto, sans-serif;
+        font-weight: 60;
+        font-size: 30px;
+        color: whitesmoke;
+        border-style: none;
+        background-color: rgba(100%, 100%, 100%, 0.1);
+   }
+
+   p.Body {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        font-family: Roboto, sans-serif;
+        font-weight: 60;
+        font-size: 30px;
+        color: whitesmoke;
+        border-style: none;
+        background-color: rgba(100%, 100%, 100%, 0.1);
+    }
+
     .search {
         background: rgba(255,255,255,0.2);
         letter-spacing: 2px;
@@ -123,7 +162,21 @@
         padding-right: 48px;
         text-align: center;
      }
+      .card {
+        background: rgba(255,255,255,0.2);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        transition: 0.3s;
+        width: 40%;
+        border-radius: 20px;
+      }
 
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+      }
+
+      .container {
+        padding: 2px 16px;
+      }
 
    </style>
 
@@ -156,7 +209,7 @@
                     <h1 class="profile-name">Mr Sleepy Bear</h1>
                     <h2 class="profile-origin">From the woods</h2>
                 </div>
-                    <p class="profile-description">I am but a fury beast looking for a nice little spot to lay my fury little head. Yawn.</p>            
+                    <p class="profile-description">I am but a fury beast looking for a nice little spot to lay my fury little head. Yawn.</p>
           </div>
        </div>
     </div>
@@ -167,15 +220,23 @@
         </div>
         <div class="bg">
             <input type="text" class="search" placeholder="Let's find you the perfect home..."/>
+        </div><br>
+          <div class="card">
+            <img src="sloth.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <p class="Header">Nest Name</p>
+              <p class="Description">Nest Description</p>
+              <p class="Body">Nightly Rate</p>
+          </div>
         </div>
-        
+
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="src/scripts/rentaburrow.js"></script>
 
-    
+
 </body>
 
 </html>
