@@ -6,9 +6,8 @@ require './spec/rspec/database_connection_setup.rb'
 class RentABurrow < Sinatra::Base
 
   get '/rentaburrow/view' do
-     # return '[{"id":0,"name":"Bart"},{"id":1,"name":"Lauren"},{"id":2,"name":"Henry"},{"id":3,"name":"Sam"}]'
-    Nest.details_json(1);
-    # p Nest.all
+    # Nest.details_json(1);
+    response = '[' + Nest.all + ']'
   end
 
   get '/' do

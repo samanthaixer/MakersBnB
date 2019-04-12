@@ -48,10 +48,10 @@ class Nest
 
   def self.json_all(all_nests)
     nests = []
-    all_nests.each do |nest|
-    nests.push(json(nest))
-    end
-    return nests
+      all_nests.each do |nest|
+        nests.push(json(nest))
+      end
+    return nests.join(',')
   end
 
 end
