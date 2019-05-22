@@ -162,12 +162,28 @@ I want my nests to be available until booking requests have been confirmed.
     - For the front end using Capybara - how on earth do you make that work with JavaScript listeners?
   - Safe to say - this is a "could be better"
 
+### What went well
+
+- Good practices for merging, branching, pairing together
+- We all understand how the thing hangs together
+-
+
+### What didn't go well
+
+- Disappointed that we didn't have as much functionality
+- Not testing the front-end (automated) - maybe we could have looked at other options rather than trying just what we knew
+
+
 ### Key notes and learnings
 
 - We decided early on not to take any shortcuts or easy routes. This was for a number of reasons:
  - The week is about working as a team, not about how much functionality we complete
  - The course is about learning and we wanted to push ourselves in areas where we aren't already feeling comfortable
  - We each wanted to stretch ourselves in areas we weren't already comfortable in, this was never going to mean fast progress
- - Finding experts is not only allowed, but greatly helps. Big shout out to Ellie and Nikhil for the Friday help with helping us display our magical nests and showing us awesome debugging skills!
+ - Finding experts is not only allowed, but greatly helps. Big shout out to Ellie and Nikhil for the Friday help with helping us display our magical nests and showing us awesome debugging skills! Have some time for people to do what they are strongest at
+ - When pairing, maybe we could have had a lead to give a direction, rather than trying to describe everything as a group. We lacked technical leadership
+ - Could we have used the coaches better? Asking for more direction? Maybe asking for a workshop to help us plan our architecture? 
 
 ### What would we do differently next time?
+
+-
