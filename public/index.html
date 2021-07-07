@@ -50,7 +50,7 @@
         font-size: 50px;
         color: whitesmoke;
         border-style: none;
-        background-color: rgba(100%, 100%, 100%, 0.1);
+        /* background-color: rgba(100%, 100%, 100%, 0.3); */
    }
 
    p.Description{
@@ -62,7 +62,7 @@
         font-size: 30px;
         color: whitesmoke;
         border-style: none;
-        background-color: rgba(100%, 100%, 100%, 0.1);
+        /* background-color: rgba(100%, 100%, 100%, 0.1); */
    }
 
    p.Body {
@@ -162,79 +162,131 @@
         padding-right: 48px;
         text-align: center;
      }
-      .card {
+      /* .card {
         background: rgba(255,255,255,0.2);
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
         transition: 0.3s;
-        width: 40%;
+        width: 4%;
         border-radius: 20px;
-      }
+        padding: .5rem;
+      } */
 
       .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
       }
 
-      .container {
+      /* .container {
         padding: 2px 16px;
+      } */
+
+      .cardiA {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
       }
+
+      ul {
+        /* display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        list-style: none; */
+      }
+
+      .cardiContainer {
+        background-color: pink;
+         padding: 10px;
+         width: 30%;
+        /*   height: 150px; */
+         margin-top: 10px;
+         border-radius: 5px;
+
+
+      }
+
+
+      /* .card {
+        border: 2px solid #e7e7e7;
+        border-radius: 4px;
+        padding: .5rem;
+        } */
 
    </style>
 
 
 <head>
-
 </head>
 
 <body>
-    <div class="split left">
-       <div class="profile">
-           <!-- <form>
-               <p>What kind of cave:</p>
-               <input type="text" id="heading" name="heading" value="A brief header"><br>
-               <p>Give a brief description: </p>
-               <input type="text" id="description" name="description" placeholder="Description here"><br>
-               <p></p>
-               <input id="submit" type="submit">
-           </form> -->
-           <!-- <button id="testButton">Test</button> -->
-           <h1 id=name1>Testname</h1>
-           <h1 id=description1>Testdesc</h1>
-           <h1 id=nightly_rate1>Testrate</h1>
-           <button id="getFirstNest">Test</button>
-           <div class="profile-container">
-                <div class="profile-wrapper">
-                    <img class="image" src="bear.jpg" alt="">
-                </div>
-                <div>
-                    <h1 class="profile-name">Mr Sleepy Bear</h1>
-                    <h2 class="profile-origin">From the woods</h2>
-                </div>
-                    <p class="profile-description">I am but a fury beast looking for a nice little spot to lay my fury little head. Yawn.</p>
-          </div>
-       </div>
+  <div class="split-left">
+    <div class="profile">
+      <div class="profile-container">
+        <div class="profile-wrapper">
+          <img class="image" src="bear.jpg" alt="">
+        </div>
+        <div>
+          <h1 class="profile-name">Mr Sleepy Bear</h1>
+          <h2 class="profile-origin">From the woods</h2>
+        </div>
+        <p class="profile-description">I am but a furry beast looking for a nice little spot to lay my furry little head. Yawn.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="split right">
+  <div class="glass">
+      <p class="welcome">Welcome to Rent-A-Burrow </p>
+  </div>
+
+
+  <div class="bg">
+    <input type="text" class="search" placeholder="Let's find you the perfect home..."/>
+  </div><br>
+
+  <div id="cardiB"> </div>
+<!--
+  <div class="cards" id="cards">
+    <div class="card">
+      <img src="sloth.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <p class="Header" id="name1"></p>
+        <p class="Description" id="description1"></p>
+        <p class="Body" id="nightly_rate1"></p>
+      </div><br>
     </div>
 
-    <div class="split right">
-        <div class="glass">
-            <p class="welcome">Welcome to Rent-A-Burrow </p>
+      <div class="card">
+        <img src="frog.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <p class="Header" id="name2"></p>
+          <p class="Description" id="description2"></p>
+          <p class="Body" id="nightly_rate2"></p>
         </div>
-        <div class="bg">
-            <input type="text" class="search" placeholder="Let's find you the perfect home..."/>
+      </div>
+
+     <div class="card">
+        <img src="bird.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <p class="Header" id="name3"></p>
+          <p class="Description" id="description3"></p>
+          <p class="Body" id="nightly_rate3"></p>
         </div><br>
-          <div class="card">
-            <img src="sloth.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-              <p class="Header">Nest Name</p>
-              <p class="Description">Nest Description</p>
-              <p class="Body">Nightly Rate</p>
-          </div>
-        </div>
-
+      </div> -->
 
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="src/scripts/rentaburrow.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/scripts/rentaburrow.js"></script>
 
 
 </body>
